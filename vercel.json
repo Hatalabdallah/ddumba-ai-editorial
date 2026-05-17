@@ -1,24 +1,9 @@
 {
-  "version": 2,
-  "framework": null,
-  "buildCommand": "NITRO_PRESET=vercel-edge npm run build",
-  "outputDirectory": ".output",
-  "installCommand": "npm install",
-  "routes": [
+  "outputDirectory": "dist",
+  "rewrites": [
     {
-      "src": "/_vercel/insights/(.*)",
-      "dest": "/_vercel/insights/$1"
-    },
-    {
-      "src": "/assets/(.*)",
-      "dest": "/.output/public/assets/$1",
-      "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
-      }
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/.output/server/index.mjs"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 }
