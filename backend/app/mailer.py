@@ -68,7 +68,7 @@ def send_welcome_email(to_email: str):
     send_smtp_email(to_email, subject, html)
 
 def broadcast_new_post_email(subscribers: list, post_title: str, post_excerpt: str, post_slug: str):
-    frontend_domain = "https://ddumba.ai" 
+    frontend_domain = "https://ddumba.kyakabi.com" 
     article_url = f"{frontend_domain}/blog/{post_slug}"
     
     subject = f"New Essay: {post_title}"
